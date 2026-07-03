@@ -1,0 +1,178 @@
+{% extends "base.html" %}
+
+{% block title %}Privacy Policy - Spendly{% endblock %}
+
+{% block head %}
+<style>
+    .privacy-container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 3rem 2rem;
+    }
+
+    .privacy-header {
+        margin-bottom: 3rem;
+    }
+
+    .privacy-title {
+        font-family: var(--font-display);
+        font-size: 2.5rem;
+        color: var(--ink);
+        margin-bottom: 0.5rem;
+        line-height: 1.2;
+    }
+
+    .privacy-updated {
+        font-size: 0.85rem;
+        color: var(--ink-muted);
+        font-weight: 500;
+    }
+
+    .privacy-section {
+        margin-bottom: 2.5rem;
+        line-height: 1.8;
+    }
+
+    .privacy-section h2 {
+        font-family: var(--font-display);
+        font-size: 1.3rem;
+        color: var(--ink);
+        margin-bottom: 0.75rem;
+        margin-top: 0;
+    }
+
+    .privacy-section p {
+        color: var(--ink-soft);
+        margin-bottom: 1rem;
+        font-size: 0.95rem;
+    }
+
+    .privacy-section p:last-child {
+        margin-bottom: 0;
+    }
+
+    .privacy-section ul {
+        list-style: none;
+        padding: 0;
+        margin: 1rem 0 1rem 1.5rem;
+    }
+
+    .privacy-section ul li {
+        color: var(--ink-soft);
+        font-size: 0.95rem;
+        margin-bottom: 0.6rem;
+        position: relative;
+        padding-left: 1.2rem;
+    }
+
+    .privacy-section ul li::before {
+        content: "•";
+        color: var(--accent);
+        font-weight: bold;
+        position: absolute;
+        left: 0;
+    }
+
+    .privacy-section strong {
+        color: var(--ink);
+        font-weight: 600;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="privacy-container">
+    <div class="privacy-header">
+        <h1 class="privacy-title">Privacy Policy</h1>
+        <p class="privacy-updated">Last updated: July 2026</p>
+    </div>
+
+    <section class="privacy-section">
+        <h2>1. Introduction</h2>
+        <p>Spendly ("we," "us," or "our") operates as a personal expense tracking application. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our service.</p>
+        <p>Please read this Privacy Policy carefully. If you do not agree with our policies and practices, please do not use our service.</p>
+    </section>
+
+    <section class="privacy-section">
+        <h2>2. Data We Collect</h2>
+        <p>We collect information you provide directly to us:</p>
+        <ul>
+            <li><strong>Account Information:</strong> Name, email address, password, and profile details</li>
+            <li><strong>Expense Data:</strong> Transaction amounts, dates, categories, descriptions, and tags</li>
+            <li><strong>Technical Information:</strong> IP address, browser type, device information, and access logs</li>
+            <li><strong>Communication Data:</strong> Messages, feedback, or support requests you send us</li>
+        </ul>
+        <p>We do not collect or store payment information. All transactions are handled by secure third-party payment processors.</p>
+    </section>
+
+    <section class="privacy-section">
+        <h2>3. How We Use Your Data</h2>
+        <p>We use the information we collect for the following purposes:</p>
+        <ul>
+            <li>To provide, maintain, and improve our service</li>
+            <li>To create and maintain your account</li>
+            <li>To generate reports and analytics on your spending patterns</li>
+            <li>To communicate with you about your account or service updates</li>
+            <li>To detect, prevent, and address technical and security issues</li>
+            <li>To comply with legal obligations</li>
+        </ul>
+        <p>We will never sell, rent, or share your personal data with third parties for marketing purposes without your explicit consent.</p>
+    </section>
+
+    <section class="privacy-section">
+        <h2>4. Data Storage and Security</h2>
+        <p>Your data is stored securely on our encrypted servers. We implement industry-standard security measures including:</p>
+        <ul>
+            <li>End-to-end encryption for sensitive data</li>
+            <li>Secure HTTPS connections for all communications</li>
+            <li>Regular security audits and updates</li>
+            <li>Restricted access to personal information</li>
+        </ul>
+        <p>While we strive to protect your information, no security system is entirely risk-free. You are responsible for maintaining the confidentiality of your account credentials.</p>
+    </section>
+
+    <section class="privacy-section">
+        <h2>5. Third Party Services</h2>
+        <p>Spendly may integrate with third-party services to provide enhanced functionality. These services have their own privacy policies, and we encourage you to review them. We are not responsible for the privacy practices of third-party services.</p>
+        <p>Third-party services we may use include:</p>
+        <ul>
+            <li>Analytics providers to understand user behavior</li>
+            <li>Payment processors for secure transactions</li>
+            <li>Cloud storage providers for data backup</li>
+        </ul>
+    </section>
+
+    <section class="privacy-section">
+        <h2>6. Your Rights</h2>
+        <p>You have the right to:</p>
+        <ul>
+            <li>Access your personal data and request a copy</li>
+            <li>Correct inaccurate or incomplete data</li>
+            <li>Request deletion of your data</li>
+            <li>Opt-out of non-essential communications</li>
+            <li>Request information about how your data is processed</li>
+        </ul>
+        <p>To exercise any of these rights, please contact us at support@spendly.app with your request.</p>
+    </section>
+
+    <section class="privacy-section">
+        <h2>7. Cookies and Tracking</h2>
+        <p>We use cookies and similar tracking technologies to enhance your experience on Spendly. These help us remember your preferences and understand how you use our service. You can control cookie settings through your browser, though some features may not function properly if cookies are disabled.</p>
+    </section>
+
+    <section class="privacy-section">
+        <h2>8. Data Retention</h2>
+        <p>We retain your personal data for as long as necessary to provide our service. If you delete your account, we will delete or anonymize your data within 30 days, except where we are required to retain it by law.</p>
+    </section>
+
+    <section class="privacy-section">
+        <h2>9. Changes to This Policy</h2>
+        <p>We may update this Privacy Policy from time to time. We will notify you of any material changes by updating the "Last updated" date at the top of this page. Your continued use of Spendly following the posting of revised Privacy Policy means you accept and agree to the changes.</p>
+    </section>
+
+    <section class="privacy-section">
+        <h2>10. Contact Us</h2>
+        <p>If you have any questions about this Privacy Policy or our privacy practices, please contact us at <strong>support@spendly.app</strong></p>
+    </section>
+</div>
+{% endblock %}
