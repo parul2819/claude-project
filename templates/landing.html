@@ -17,7 +17,7 @@
         </p>
         <div class="hero-actions">
             <a href="{{ url_for('register') }}" class="btn-primary">Create free account</a>
-            <a href="{{ url_for('login') }}" class="btn-ghost">See how it works</a>
+            <a href="#" class="btn-primary">See how it works</a>
         </div>
     </div>
     <div class="hero-visual">
@@ -96,4 +96,63 @@
     </div>
 </section>
 
+<!-- Video Modal -->
+<div id="videoModal" class="modal">
+    <div class="modal-overlay"></div>
+    <div class="modal-content">
+        <button class="modal-close">&times;</button>
+        <div class="modal-video-container">
+            <iframe id="videoFrame" class="modal-video" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="How Spendly Works" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+<script>
+    const videoModal = document.getElementById('videoModal');
+    const videoFrame = document.getElementById('videoFrame');
+    const modalOverlay = videoModal.querySelector('.modal-overlay');
+    const modalClose = videoModal.querySelector('.modal-close');
+
+    // Find the "See how it works" button
+    const seeHowButton = document.querySelector('a[href="#"][class*="btn"]');
+    const allButtons = document.querySelectorAll('.hero-actions a');
+    let seeHowItWorksBtn = null;
+
+    allButtons.forEach(btn => {
+        if (btn.textContent.includes('See how it works')) {
+            seeHowItWorksBtn = btn;
+        }
+    });
+
+    // Open modal
+    if (seeHowItWorksBtn) {
+        seeHowItWorksBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            videoModal.classList.add('active');
+        });
+    }
+
+    // Close modal function
+    function closeModal() {
+        videoModal.classList.remove('active');
+        // Stop video by resetting src
+        const src = videoFrame.src;
+        videoFrame.src = '';
+        videoFrame.src = src;
+    }
+
+    // Close button click
+    modalClose.addEventListener('click', closeModal);
+
+    // Click outside (on overlay) to close
+    modalOverlay.addEventListener('click', closeModal);
+
+    // Prevent closing when clicking on modal content
+    videoModal.querySelector('.modal-content').addEventListener('click', function(e) {
+        e.stopPropagation();
+    });
+</script>
 {% endblock %}
